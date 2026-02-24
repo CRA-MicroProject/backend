@@ -4,22 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "tsx api/server.ts",
     "dev": "nodemon api/server.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "vercel-build": "npm run build",
+    "vercel:dev": "vercel dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^25.3.0",
     "nodemon": "^3.1.13",
     "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "serverless-http": "^3.0.0"
   }
 }
