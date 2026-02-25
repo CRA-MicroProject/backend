@@ -1,11 +1,11 @@
-# backend
-Endpoints to retrieve and update the CRA database
+# API Layer
+Endpoints to retrieve data from relational DB
 
 
 
-##endpoints
+# List of endpoints
 
-# 1) /crahelper/getAvailableLanguages
+## 1) /crahelper/getAvailableLanguages
 
 [
   {
@@ -22,7 +22,7 @@ Endpoints to retrieve and update the CRA database
 
 
 
-# 2)/crahelper/getAllEnglishTerms
+## 2)/crahelper/getAllEnglishTerms
 
 [
   {
@@ -148,8 +148,8 @@ Endpoints to retrieve and update the CRA database
 ]
 
 
-# 3) /crahelper/getTermTranslation?termId=XX&lang=YYY
-3.1) /crahelper/getTermTranslation?termId=1&lang=pt-br
+## 3) /crahelper/getTermTranslation?termId=XX&lang=YYY
+### 3.1) /crahelper/getTermTranslation?termId=1&lang=pt-br
 {
   "translation_id": 21,
   "term_id": 1,
@@ -162,7 +162,7 @@ Endpoints to retrieve and update the CRA database
 }
 
 
-3.2) /crahelper/getTermTranslation?termId=1&lang=mn
+### 3.2) /crahelper/getTermTranslation?termId=1&lang=mn
 
 {
   "translation_id": 1,
