@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "tsx api/server.ts",
-    "dev": "nodemon api/server.ts",
+    "dev": "nodemon --exec tsx api/server.ts",
     "build": "tsc",
     "vercel-build": "npm run build",
     "vercel:dev": "vercel dev"

@@ -1,10 +1,4 @@
 import { Pool } from 'pg';
-import * as dotenv from 'dotenv';
-import path from 'path';
-
-// Load env from api/db/.env first (when present), then fall back to project root .env
-dotenv.config({ path: path.resolve(__dirname, '.env') });
-dotenv.config();
 
 // Support either a connection string (DB_URL / DATABASE_URL) or individual DB_* vars
 const connectionString = process.env.DB_URL || process.env.DATABASE_URL;
