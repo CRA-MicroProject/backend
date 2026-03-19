@@ -1,3 +1,9 @@
 .env
-dist/
 node_modules/
+dist/
+
+# tsc emit (rootDir src → project root; mirrors Woodcreek server.js layout)
+/server.js
+/server.js.map
+/routes/
+/db/
