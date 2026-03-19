@@ -10,8 +10,9 @@ dotenv.config();
 const connectionString = process.env.DB_URL || process.env.DATABASE_URL;
 
 const poolConfig: any = {
-  max: 20,
-  idleTimeoutMillis: 30000,
+  max: Number(process.env.PG_POOL_MAX || 1),
+  idleTimeoutMillis: 10000,
+  connectionTimeoutMillis: Number(process.env.PG_CONNECTION_TIMEOUT_MS || 10000),
 };
 
 if (connectionString) {
@@ -31,7 +32,6 @@ const pool = new Pool(poolConfig);
 
 pool.on('error', (err) => {
   console.error('Unexpected error on idle client', err);
-  process.exit(-1);
 });
 
 export default pool;
