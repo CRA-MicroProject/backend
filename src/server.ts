@@ -12,10 +12,11 @@ app.get('/', (req: Request, res: Response) => {
 
 app.use('/crahelper', crahelperRouter);
 
-
-app.listen(PORT, () => {
+// Run locally with npm start; on Vercel the handler is used via api/index.js
+if (require.main === module) {
+  app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
-}); 
+  });
+}
 
-// Export for Vercel
 export default serverless(app);
